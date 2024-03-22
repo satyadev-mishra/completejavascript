@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App - Satyadev Mishra</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <h1 class="logo">Todo List App</h1>
+        <ul class="nav-items">
+          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link"><a href="#">About</a></li>
+          <li class="nav-link"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="hero-section container">
+        <h2>Add your plan today!</h2>
+        <button class="btn">Learn More</button>
+      </section>
+    </header>
+    <section class="todo-task container">
+      <h2>Add your today's task.</h2>
+
+      <form id="todo-form" class="todo-form">
+        <input
+          type="text"
+          placeholder="Write your task here..."
+          id="taskValue"
+        />
+        <button type="submit" class="btn" id="addTask">Add</button>
+      </form>
+      <ul class="tasks-list"></ul>
+    </section>
+    <section class="sign-up-section container">
+      <h2>Sign Up</h2>
+      <form action="" id="sign-up" class="sign-up">
+        <div class="form-group">
+          <label for="username">Name</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="number">Number</label>
+          <input
+            type="text"
+            pattern="[0-9]"
+            maxlength="10"
+            minlength="10"
+            id="number"
+            name="number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+        </div>
+        <button type="submit" class="btn">Create Account</button>
+      </form>
+    </section>
+  </body>
+</html>

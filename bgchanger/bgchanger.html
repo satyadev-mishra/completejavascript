@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Changer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      #btn {
+        padding: 1rem 1.5rem;
+        border: none;
+        outline: none;
+        box-shadow: 0px 0px 10px #8d8d8d;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: 1px solid black;
+      }
+      #btn:hover {
+        box-shadow: 0px 0px 10px 3px #b3b3b3;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">STOP</button>
+    <script>
+      const btn = document.querySelector("#btn");
+      const body = document.body;
+      function colorGenerator() {
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        return (color = `rgb(${red},${green},${blue})`);
+      }
+      const id = setInterval(() => {
+        body.style.backgroundColor = colorGenerator();
+      }, 1000);
+
+      btn.addEventListener("click", (e) => {
+        btn.textContent = color;
+        btn.style.backgroundColor = color;
+        clearInterval(id);
+      });
+    </script>
+  </body>
+</html>

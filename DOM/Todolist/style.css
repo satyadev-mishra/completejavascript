@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font:'Poppins',sans-serif;
+    --white: #ffffff;
+    --black:#000000;
+    --theme-color:#00567A;
+}
+html{
+    font-size: 10px; /* font-size: 10px; = 1rem*/
+}
+body{
+    font-family: var(--font);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul li{
+    list-style: none;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+h2 {
+    font-size: 1.6rem;
+    word-spacing: 0.2em;
+}
+*::selection{
+    background-color: var(--theme-color);
+    color: #fff;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+.btn {
+    outline: none;
+    border: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.btn:hover {
+ opacity:1;
+}
+/* --------------------------------------header------------------------------ */
+.header{
+    background:linear-gradient(to bottom, #00000097 30%, #00567A),url("./bg-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+    color: var(--white);
+    position:relative;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    /* text-decoration: overline; */
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.nav ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.3rem;
+}
+.nav ul li:hover{
+    text-decoration: overline;
+}
+.hero-section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   text-align: center;
+}
+
+.hero-section .btn{
+    margin-top: 1rem;
+}
+/* --------------------------------------!header------------------------------ */
+
+/* -------------------------------------section todo-task---------------------/ */
+.todo-task{
+    text-align: center;
+    margin-top: 3rem;
+}
+.todo-form{
+    margin: auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    max-width: 1000px;
+}
+.todo-form input[type="text"]{
+    border: none;
+    width: 70%;
+    outline: none;
+    background-color: #f4f4f4;
+    background-color: #00557a1b;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    word-spacing: 0.1em;
+}
+.todo-form .btn{
+   background-color:var(--theme-color);
+   color: #fff;
+    width: 20%;
+}
+
+.tasks-list{
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 6rem;
+}
+.tasks-list li{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+    margin: auto;
+    padding: 0.2rem 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.tasks-list li span{
+    width: 70%;
+    padding: 1rem 2rem;
+    background-color: #f1f1f1;
+    text-indent: 1rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.tasks-list li .btnGroup{
+    /* width: 20%; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+.tasks-list li .btnGroup .btn{
+    /* width: 48%; */
+    /* gap: 0.3rem; */
+}
+.done{
+    background-color: #398739;
+    color: #fff;
+}
+.edit{
+   margin: 0px 5px; 
+   background-color: #00567A;
+   color: #fff;
+}
+.taskDone{
+    text-decoration-line: line-through;
+    text-decoration-thickness: 2px;
+    opacity: 0.8;
+    font-weight: 300;
+    font-style: italic;
+}
+.delete{
+    background-color: #cc4949;
+    color: #fff;
+}
+/* -------------------------------------!section todo-task---------------------/ */
+
+/* -------------------------------------sign-up form---------------------/ */
+.sign-up-section{
+    text-align: center;
+    height: 50vh;
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+}
+.form-group{
+    text-align: left;
+    font-size: 1.3rem;
+    
+}
+.form-group label{
+    display: block;
+    margin: 0.5rem 0;
+}
+.form-group input{
+    display: block;
+    padding: 1rem 2rem;
+    background-color: #f4f4f4;
+    outline: none;
+    border: 1px solid #d2d2d2;
+    width: 100%;
+}
+.sign-up .btn{
+    background-color: #00567A;
+    color: #fff;
+    margin: 2rem 0;
+}
